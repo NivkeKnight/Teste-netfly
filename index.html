@@ -3,26 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contador Interativo</title>
+    <title>Dashboard Interativo</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <h1>Contador Interativo</h1>
-    </header>
+    <div class="dashboard">
+        <header>
+            <h1>Dashboard Interativo</h1>
+            <button id="toggle-theme">Alterar Tema</button>
+        </header>
 
-    <main>
-        <div class="counter">
-            <button id="decrease">-</button>
-            <span id="count">0</span>
-            <button id="increase">+</button>
-        </div>
-    </main>
+        <section class="cards">
+            <div class="card">
+                <h3>Usuários Ativos</h3>
+                <p id="active-users">0</p>
+            </div>
+            <div class="card">
+                <h3>Vendas Totais</h3>
+                <p id="total-sales">$0</p>
+            </div>
+        </section>
 
-    <footer>
-        <p>Feito com ❤️ por Kevin</p>
-    </footer>
+        <section class="charts">
+            <canvas id="lineChart" width="400" height="200"></canvas>
+            <canvas id="barChart" width="400" height="200"></canvas>
+        </section>
+    </div>
 
+    <script src="chart-library.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
